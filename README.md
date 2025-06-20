@@ -51,7 +51,7 @@ A solução foi estruturada em **três etapas principais**, seguindo o fluxo de 
 ### 2. **Recuperação de Documentos com BM25**
 
 - Foi utilizado o modelo **BM25Okapi** da biblioteca `rank_bm25` para indexar os documentos.
-- Uma função `recuperar_documentos(pergunta, bm25, corpus)` retorna os documentos mais relevantes (top-5) com base na similaridade da pergunta com os tokens dos documentos.
+- Uma função `recuperar_documentos(pergunta, bm25, corpus)` retorna os documentos mais relevantes (top-3) com base na similaridade da pergunta com os tokens dos documentos.
 
 ### 3. **Geração de Resposta com LLM**
 
@@ -65,7 +65,6 @@ A solução foi estruturada em **três etapas principais**, seguindo o fluxo de 
 - A interface exibe:
 
   - Pergunta do usuário
-  - Documentos recuperados (top-3)
   - Resposta gerada pelo modelo
 
 ## ⚠️ Dificuldades Enfrentadas
