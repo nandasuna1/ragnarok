@@ -18,7 +18,7 @@ bm25, tokenized_corpus = preparar_bm25(corpus)
 # Função usada pelo Gradio
 
 
-def responder(pergunta, k=5):
+def responder(pergunta, k=3):
     docs = recuperar_documentos(pergunta, bm25, corpus, k)
     return gerar_resposta(pergunta, docs)
 
